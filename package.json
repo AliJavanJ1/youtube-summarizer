@@ -1,0 +1,17 @@
+{
+  "name": "youtube-summarizer",
+  "private": true,
+  "scripts": {
+    "build": "bun build ./youtube.js --outfile=./youtube.bundle.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "toastify-js": "^1.12.0",
+    "youtube-transcript": "^1.3.1"
+  }
+}

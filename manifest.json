@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "YT to Gemini Auto Flow",
+  "version": "1.4.1",
+  "description": "Automatically sends YouTube video transcripts to Gemini for explanation",
+  "permissions": [
+    "tabs",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "*://gemini.google.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "css": ["toastify.css"],
+      "js": ["youtube.bundle.js"]
+    },
+    {
+      "matches": ["*://gemini.google.com/*"],
+      "js": ["gemini.js"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "youtube-summarizer-personal@javani.com",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}
