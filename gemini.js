@@ -26,7 +26,7 @@ waitForElement("button[aria-label='Temporary chat']").then((tempIcon) => {
     if (request.action === "START_GEMINI") {
       tempIcon.click();
       await waitForElement(".temporary-chat-card");
-      let modePicker = await waitForElement("[aria-label='Open mode picker']");
+      let modePicker = await waitForElement("[aria-label^='Open mode picker']");
 
       modePicker.click();
       await waitForElement('gem-menu-item');
