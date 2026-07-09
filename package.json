@@ -2,7 +2,7 @@
   "name": "youtube-summarizer",
   "private": true,
   "scripts": {
-    "build": "bun build ./youtube.js --outfile=./youtube.bundle.js && bestzip youtube-summarizer.zip manifest.json background.js gemini.js youtube.bundle.js toastify.css icons"
+    "build": "bun build ./youtube.js --outfile=./youtube.bundle.js && bestzip youtube-summarizer.zip manifest.json background.js gemini.js youtube.bundle.js toastify.css icons LICENSE"
   },
   "devDependencies": {
     "@types/bun": "latest",
