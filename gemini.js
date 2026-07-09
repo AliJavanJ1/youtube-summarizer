@@ -37,10 +37,10 @@ waitForElement("button[aria-label='Temporary chat']").then((tempIcon) => {
       await waitForElement('gem-menu-item');
       menu_itmes = document.querySelectorAll('gem-menu-item');
       menu_itmes[menu_itmes.length - 1].click();
-      await waitForElement("gem-menu-item gem-menu-item, gem-menu-item+div gem-menu-item");
-      menu_itmes = document.querySelectorAll("gem-menu-item gem-menu-item, gem-menu-item+div gem-menu-item");
-      menu_itmes[menu_itmes.length - 1].click();
 
+    //   await waitForElement("gem-menu-item gem-menu-item, gem-menu-item+div gem-menu-item");
+    //   menu_itmes = document.querySelectorAll("gem-menu-item gem-menu-item, gem-menu-item+div gem-menu-item");
+    //   menu_itmes[menu_itmes.length - 1].click();
 
       let editor = await waitForElement("rich-textarea")
       editor.focus();
